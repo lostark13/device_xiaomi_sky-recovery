@@ -51,3 +51,16 @@ vendor_dlkm                                             /vendor_dlkm           e
 # The update_engine code looks for this entry in order to determine the boot device address
 # and fails if it does not find it.
 /dev/block/bootdevice/by-name/misc                      /misc                  emmc    defaults                                                                                        defaults
+
+# Flashable partitions
+/dev/block/bootdevice/by-name/boot                      /boot                  emmc    defaults                                                                                        slotselect
+/dev/block/bootdevice/by-name/vendor_boot               /vendor_boot           emmc    defaults                                                                                        slotselect
+/dev/block/bootdevice/by-name/recovery                  /recovery              emmc    defaults                                                                                        slotselect
+/dev/block/bootdevice/by-name/dtbo                      /dtbo                  emmc    defaults                                                                                        slotselect
+/dev/block/bootdevice/by-name/vbmeta                    /vbmeta                emmc    defaults                                                                                        slotselect
+/dev/block/bootdevice/by-name/vbmeta_system             /vbmeta_system         emmc    defaults                                                                                        slotselect
+/dev/block/bootdevice/by-name/vbmeta_vendor             /vbmeta_vendor         emmc    defaults                                                                                        slotselect
+
+# Storage
+/dev/block/bootdevice/by-name/persist                   /persist               ext4    defaults                                                                                        defaults
+/dev/block/bootdevice/by-name/cust                      /cust                  ext4    defaults                                                                                        defaults
